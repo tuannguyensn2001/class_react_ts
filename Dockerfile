@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 # install node modules and build assets
 RUN yarn install && yarn build
-CMD ["yarn","preview"]
+CMD ["yarn","preview","--host"]
 ## nginx state for serving content
 #FROM nginx:alpine
 ## Set working directory to nginx asset directory
